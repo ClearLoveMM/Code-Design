@@ -1,0 +1,68 @@
+.Header {
+    position: fixed;
+    width: 100%;
+    padding: 50px 0;
+    z-index: 100;
+}
+
+.HeaderGroup {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(5, auto) 120px;
+    gap: 5px 5px;
+    align-items: center;
+}
+
+.HomeIMG {
+    width:30px;
+    height: 30px;
+    background: url('../images/logo-designcode.svg') no-repeat;
+}
+
+.HeaderGroupLink button {
+    font-size: 20px;
+    color: #fff;
+    background: none;
+    padding: 6px 20px;
+    border-radius: 20px;
+    transition: 0.5s cubic-bezier(.2, .8, .2, 1);
+}
+
+.HeaderGroupLink button:hover {
+    color: #000;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+    transform: translateY(-3px);
+}
+
+#HeaderGroupBuy button {
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
+    background: #56ccf2;
+    border-radius: 20px;
+    transition: 0.5s cubic-bezier(.2, .8, .2, 1);
+}
+
+#HeaderGroupBuy button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 640px) {
+    .Header {
+        padding: 20px 0;
+    }
+    .HeaderGroupLink,
+    #HeaderGroupBuy {
+        display: none;
+    }
+    .HeaderGroup {
+        grid-template-columns: auto;
+    }
+    .HomeIMG {
+        background: url('../images/logo-more.svg') no-repeat;
+    }
+}
